@@ -1,18 +1,9 @@
 #include "functions.hpp"
 
-#include <algorithm>
-#include <array>
-#include <cstdint>
+#include "functions_implementation.hpp"
 
 namespace functions {
-double exp(double exponent) {
-  constexpr int32_t numberOfIterations = 100;
-  double term = 1.0;
-  double result = term;
-  for (int32_t iteration = 1; iteration < numberOfIterations; ++iteration) {
-    term *= exponent / iteration;
-    result += term;
-  }
-  return result;
+double exp_taylor_200(const double exponent) {
+  return implementation::taylor_exp<200>(exponent);
 }
 }  // namespace functions

@@ -3,7 +3,7 @@ project(FloatingPointFunctions VERSION 0.1 LANGUAGES CXX)
 
 find_package(GTest REQUIRED)
 
-add_library(${PROJECT_NAME} include/functions.hpp source/functions.cpp)
+add_library(${PROJECT_NAME} include/functions.hpp include/functions_implementation.hpp source/functions.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 enable_testing()

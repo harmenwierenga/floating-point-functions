@@ -1,0 +1,8 @@
+---
+BasedOnStyle: Google
+---
+Language: Cpp
+# Make formatting deterministic
+DerivePointerAlignment: false
+PointerAlignment: Left
+
